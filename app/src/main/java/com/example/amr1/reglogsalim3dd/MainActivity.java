@@ -42,35 +42,45 @@ public class MainActivity extends AppCompatActivity {
     //Login
     public void Login_btn_Login (View v){
 
-
         String Log_in_name=Login_name.getText().toString().trim();
         String Log_in_password=Login_password.getText().toString().trim();
 
-        Response.Listener<String>responseListener = new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
+        if (!Log_in_name.matches("[a-zA-Z0-9._-]+@[a-z]+.[a-z]+")) {
+            Login_name.setError("اكتب الايميل صح");
+        }
+        else if (Log_in_password.equals("")){
+            Login_password.setError("أكتب رقم سرى ");
+            Login_password.setHint("أكتب رقم سري ");
+        }
+        else {
+            Response.Listener<String>responseListener = new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
 
-                JSONObject jsonObject = null;
-                try {
-                    jsonObject = new JSONObject(response);
-                    boolean success = jsonObject.getBoolean("success");
-                    if (success){
-                        Toast.makeText(MainActivity.this, "تم تسجيل الدخول", Toast.LENGTH_SHORT).show();
-                        ly_login.setVisibility(View.INVISIBLE);
-                    }else {
-                        Toast.makeText(MainActivity.this, "البيانات غير صحيحة", Toast.LENGTH_SHORT).show();
+                    JSONObject jsonObject = null;
+                    try {
+                        jsonObject = new JSONObject(response);
+                        boolean success = jsonObject.getBoolean("success");
+                        if (success){
+                            Toast.makeText(MainActivity.this, "تم تسجيل الدخول", Toast.LENGTH_SHORT).show();
+                            ly_login.setVisibility(View.INVISIBLE);
+                            startActivity(new Intent(getApplicationContext(),Create_Post_Found.class));
+
+                        }else {
+                            Toast.makeText(MainActivity.this, "البيانات غير صحيحة", Toast.LENGTH_SHORT).show();
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
-                } catch (JSONException e) {
-                    e.printStackTrace();
+
                 }
-
-            }
-        };
-        Send_Data_Login send_data =new Send_Data_Login(Log_in_name,Log_in_password,responseListener);
-        RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
-        queue.add(send_data);
+            };
+            Send_Data_Login send_data =new Send_Data_Login(Log_in_name,Log_in_password,responseListener);
+            RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
+            queue.add(send_data);
 
 
+        }
     }
 
 

@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Registration" />
-        <activity android:name=".Register_abdo"></activity>
+        <activity android:name=".Register_abdo" />
+        <activity android:name=".Create_Post_Found"></activity>
     </application>
 
 </manifest>

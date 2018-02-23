@@ -15,7 +15,9 @@ import static com.android.volley.Request.Method.POST;
 
 class Send_Data_Login extends StringRequest  {
 
-    private static final String SEND_DATA_URL = "http://192.168.1.102/login_3dd.php";
+
+
+    private static final String SEND_DATA_URL = "http://192.168.1.3/login_3dd.php";
     private Map<String,String> MapData;
 
     public Send_Data_Login(String Login_name, String Login_password, Response.Listener<String> listener) {
