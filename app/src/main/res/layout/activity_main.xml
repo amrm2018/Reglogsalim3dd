@@ -71,7 +71,8 @@
         android:padding="10dp"
         android:orientation="vertical"
         android:gravity="center"
-        android:visibility="invisible">
+
+        >
 
         <EditText
             android:layout_width="match_parent"
@@ -86,6 +87,16 @@
             android:layout_marginTop="10dp"
             android:hint="الرقم السري"
             android:id="@+id/Login_EIXT_Password"/>
+
+        <CheckBox
+            android:id="@+id/chk_remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="تذكرنى"
+            android:checked="true"
+            android:textOff="نعم"
+            android:textOn="لا"/>
 
         <Button
             android:layout_width="150dp"

@@ -2,13 +2,16 @@ package com.example.amr1.reglogsalim3dd;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,12 +26,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Registration extends AppCompatActivity {
+public class Registration extends AppCompatActivity  {
     EditText name, email, password, password2;
 
    // Spinner Spinner_month ;
    // TextView TV_show_spinner;
     RadioButton rd_male ,rd_female ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,10 @@ public class Registration extends AppCompatActivity {
         email = (EditText) findViewById(R.id.ETXT_Email);
         password = (EditText) findViewById(R.id.ETXT_Pass);
         password2 = (EditText) findViewById(R.id.ETXT_Pass2);
+
+
+
+
 
         //Spinner_month=findViewById(R.id.spinner_month);
        // TV_show_spinner=findViewById(R.id.tv_show_spinner);
@@ -133,6 +141,17 @@ public class Registration extends AppCompatActivity {
             queue.add(send_Data);
         }
     }
+
+//    @Override
+//    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//        if (isChecked) {
+//            // do something when check is selected
+//            Toast.makeText(this, " Done remember ", Toast.LENGTH_SHORT).show();
+//        } else {
+//            //do something when unchecked
+//            Toast.makeText(this, " no Switch", Toast.LENGTH_SHORT).show();
+//        }
+//    }
 
 
 

@@ -17,7 +17,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="46dp"
-            android:layout_gravity="center_vertical">
+            android:layout_gravity="center_vertical" >
 
             <LinearLayout
                 android:onClick="btn_create_post_found"
@@ -29,7 +29,7 @@
                 android:paddingLeft="1dp"
                 android:paddingRight="5dp"
                 android:gravity="center"
-                android:background="@color/color8">
+                android:background="@color/color8" >
 
                 <TextView
                     android:onClick="btn_create_post_found"
@@ -71,17 +71,16 @@
                     android:layout_marginRight="10dp"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="@color/color8"/>
+                    android:textColor="@color/color8" />
 
                 <ImageView
                     android:id="@+id/img_back"
-
+                    android:onClick="btn_back_logout"
                     android:layout_width="28dp"
                     android:layout_height="22dp"
                     android:src="@drawable/right_arrow"
                     android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    />
+                    android:layout_centerVertical="true" />
 
             </LinearLayout>
 
@@ -103,10 +102,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical" >
+
 
                 <ImageView
-                    android:id="@+id/img_select"
+                    android:id="@+id/img_select_image"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     android:layout_marginTop="5dp"
@@ -130,8 +130,7 @@
                     android:layout_marginTop="3dp"
                     android:paddingRight="5dp"
                     android:paddingLeft="5dp"
-                    android:background="@color/color8"
-                    >
+                    android:background="@color/color8">
 
                     <EditText
                         android:id="@+id/ed_year"
@@ -342,13 +341,9 @@
 
                 </LinearLayout>
 
-
-
             </LinearLayout>
 
         </ScrollView>
-
-
 
     </android.support.v7.widget.CardView>
 

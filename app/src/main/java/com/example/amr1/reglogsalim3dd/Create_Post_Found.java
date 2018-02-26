@@ -1,5 +1,7 @@
 package com.example.amr1.reglogsalim3dd;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -87,13 +89,11 @@ public class Create_Post_Found extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(Create_Post_Found.this);
         queue.add(send_Data);
 
-
-
-
-
-
     }//-------------------
 
 
-
+    public void btn_back_logout(View view) {
+        getSharedPreferences("MyPref1",MODE_PRIVATE).edit().clear().commit();
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+    }
 }
