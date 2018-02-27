@@ -22,7 +22,8 @@ public class Create_Post_Found extends AppCompatActivity {
     EditText ED_day,ED_year,ED_phone,ED_place_the_case , ED_info_the_case ;
     Spinner SP_month ,SP_city;
     RadioButton RD_male , RD_female ;
-    TextView TV_show_month , TV_show_City;
+    TextView TV_show_month , TV_show_City ,TV_show_email_user;
+    GloablV gloablV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,11 @@ public class Create_Post_Found extends AppCompatActivity {
         String Sp_City = SP_city.getSelectedItem().toString();
         TV_show_City.setText(Sp_City);
 
+
+        gloablV = (GloablV)getApplicationContext();
+        TV_show_email_user=findViewById(R.id.tv_show_email_user);
+        TV_show_email_user.setText(gloablV.getEmail_user());
+
     }
 
     public void btn_create_post_found (View view){
@@ -60,9 +66,9 @@ public class Create_Post_Found extends AppCompatActivity {
         String Year = ED_year.getText().toString().trim();
         String Gender ;
         if (RD_male.isChecked())
-            Gender="male";
+            Gender="ذكر";
         else
-            Gender="female";
+            Gender="أنثي";
         String Phone = ED_phone.getText().toString().trim();
         String Place_thecase = ED_place_the_case.getText().toString();
         String Info_thecase = ED_info_the_case.getText().toString();
@@ -84,7 +90,6 @@ public class Create_Post_Found extends AppCompatActivity {
                 }
             }
         };
-
         Send_data_post_found send_Data = new Send_data_post_found(City,Day, Month, Year,Gender,Phone,Place_thecase,Info_thecase, responseLisener);
         RequestQueue queue = Volley.newRequestQueue(Create_Post_Found.this);
         queue.add(send_Data);

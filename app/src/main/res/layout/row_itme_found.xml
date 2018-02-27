@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="email_user"
+        android:id="@+id/tv_email_userList"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"/>
+
+    <TextView
+        android:id="@+id/tv_date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_place_thecase"
+        android:layout_alignEnd="@+id/tv_phone1"
+        android:layout_marginEnd="7dp"
+        android:text="data_time" />
+
+    <TextView
+        android:id="@+id/tv_place_thecase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_email_userList"
+        android:layout_marginEnd="29dp"
+        android:layout_toStartOf="@+id/tv_phone1"
+        android:text="place_thecase" />
+
+    <TextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tv_date_time"
+        android:layout_marginEnd="14dp"
+        android:text="gender" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/tv_place_thecase"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/img"
+        android:layout_marginTop="7dp"
+        android:text="رقم والد الحالة" />
+
+    <TextView
+        android:id="@+id/tv_phone1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_marginEnd="16dp"
+        android:layout_toStartOf="@+id/textView5"
+        android:text="phone" />
+
+    <TextView
+        android:id="@+id/tv_info_thecase"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@+id/tv_phone1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="معومات عن الحالة" />
+
+    <TextView
+        android:id="@+id/tv_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_info_thecase"
+        android:layout_alignStart="@+id/tv_city"
+        android:layout_marginStart="11dp"
+        android:text="year" />
+
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_info_thecase"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/tv_year"
+        android:text="month" />
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_info_thecase"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/tv_month"
+        android:text="day" />
+
+    <TextView
+        android:id="@+id/tv_code_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_email_userList"
+        android:layout_below="@+id/tv_email_userList"
+        android:text="City" />
+
+
+</RelativeLayout>

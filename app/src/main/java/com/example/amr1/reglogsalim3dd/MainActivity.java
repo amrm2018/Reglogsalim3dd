@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
        gloablV = (GloablV) getApplicationContext();
 
 
+
+
     }
     public void btn_Go_Registration (View v){
         startActivity(new Intent(getApplicationContext(),Registration.class));
@@ -88,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
                         if (success){
                             Toast.makeText(MainActivity.this, "تم تسجيل الدخول", Toast.LENGTH_SHORT).show();
                             ly_login.setVisibility(View.INVISIBLE);
-
                             gloablV.setEmail_user(Log_in_name);
 
                             if (chk_remember.isChecked()) {

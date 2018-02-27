@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class Send_data_post_found extends StringRequest {
-    private static final String SEND_DATA_URL = "http://192.168.1.3/create_post_found.php";
+    private static final String SEND_DATA_URL = "http://192.168.1.3/app_salim_3dd/create_post_found.php";
     private Map<String, String> MapData;
 
     public Send_data_post_found(String city, String day, String month,String year,String gender,String phone,String place_thecase ,

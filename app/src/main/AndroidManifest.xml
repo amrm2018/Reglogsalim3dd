@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
+        android:name=".GloablV"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,7 +22,9 @@
         </activity>
         <activity android:name=".Registration" />
         <activity android:name=".Register_abdo" />
-        <activity android:name=".Create_Post_Found"></activity>
+        <activity android:name=".Create_Post_Found" />
+        <activity android:name=".All_post_found_Activity" />
+        <activity android:name=".Post_Found_Activity"></activity>
     </application>
 
 </manifest>

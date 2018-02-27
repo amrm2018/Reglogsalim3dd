@@ -17,7 +17,7 @@ class Send_Data_Login extends StringRequest  {
 
 
 
-    private static final String SEND_DATA_URL = "http://192.168.1.5/login_3dd.php";
+    private static final String SEND_DATA_URL = "http://192.168.1.3/app_salim_3dd/login_3dd.php";
     private Map<String,String> MapData;
 
     public Send_Data_Login(String Login_name, String Login_password, Response.Listener<String> listener) {
