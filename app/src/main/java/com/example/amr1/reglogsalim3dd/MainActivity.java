@@ -1,16 +1,13 @@
 package com.example.amr1.reglogsalim3dd;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -125,5 +122,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    public void Go_to_activity_all_post_found(View view) {
+        startActivity(new Intent(getApplicationContext(),Show_All_post_found_Activity.class));
+    }
 }

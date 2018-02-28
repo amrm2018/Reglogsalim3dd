@@ -24,8 +24,8 @@
         <activity android:name=".Register_abdo" />
         <activity android:name=".Create_Post_Found"
             android:theme="@style/AppTheme_NoActionBar_Post_found"/>
-        <activity android:name=".All_post_found_Activity" />
-        <activity android:name=".Post_Found_Activity"></activity>
+        <activity android:name=".Show_All_post_found_Activity" />
+        <activity android:name=".Show_Post_Found_Activity"></activity>
     </application>
 
 </manifest>

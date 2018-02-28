@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.amr1.reglogsalim3dd.All_post_found_Activity">
+    tools:context="com.example.amr1.reglogsalim3dd.Show_All_post_found_Activity">
 
     <TextView
         android:id="@+id/tv_email_user"

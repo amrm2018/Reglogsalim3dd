@@ -101,8 +101,13 @@ public class Create_Post_Found extends AppCompatActivity {
         String Place_thecase = ED_place_the_case.getText().toString();
         String Info_thecase = ED_info_the_case.getText().toString();
 
-        Response.Listener<String> responseLisener = new Response.Listener<String>() {
 
+
+
+
+
+
+        Response.Listener<String> responseLisener = new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {

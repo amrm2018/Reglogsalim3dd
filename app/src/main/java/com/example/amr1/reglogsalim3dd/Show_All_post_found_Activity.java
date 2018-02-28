@@ -26,11 +26,11 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class All_post_found_Activity extends AppCompatActivity {
+public class Show_All_post_found_Activity extends AppCompatActivity {
 
     RequestQueue requestQueue;
     String url = "http://192.168.1.3/app_salim_3dd/show_all_post_found.php";
-    ArrayList<listitme> listpostfound =new ArrayList<listitme>();
+    ArrayList<listitme> ListMovis =new ArrayList<listitme>();
     ListView listView ;
     TextView text_total ,text_email_user;
     GloablV gloablV;
@@ -38,7 +38,7 @@ public class All_post_found_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_all_post_found);
+        setContentView(R.layout.activity_show_all_post_found);
 
         listView = findViewById(R.id.list_view_post);
 
@@ -75,8 +75,8 @@ public class All_post_found_Activity extends AppCompatActivity {
                                String place_thecase = res.getString("place_the_case");
                                String info_thecase = res.getString("info_the_case");
                                String email_user = res.getString("email_user");
+                               ListMovis.add(new listitme(code_post_found,date_time,img,city,day,month,year,gender,phone,place_thecase,info_thecase,email_user));
 
-                               //listPost.add(new listitme());
                            }
 
                        } catch (JSONException e) {
@@ -94,8 +94,8 @@ public class All_post_found_Activity extends AppCompatActivity {
     }
 
     public void  ListDate(){
-     //   ListAdapter ad = new ListAdapter(ListMovis);
-      //  listView.setAdapter(ad);
+       ListAdapter ad = new ListAdapter(ListMovis);
+       listView.setAdapter(ad);
     }
 
     class  ListAdapter extends BaseAdapter{
@@ -158,7 +158,7 @@ public class All_post_found_Activity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
 
-                   Intent openPost= new Intent(getApplicationContext(),Post_Found_Activity.class);
+                   Intent openPost= new Intent(getApplicationContext(),Show_Post_Found_Activity.class);
                    openPost.putExtra("text_info",Listitme.get(i).info_thecase);
                    openPost.putExtra("text_code",Listitme.get(i).code_p_found);
 

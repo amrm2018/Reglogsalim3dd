@@ -17,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:src="@drawable/amr2"
-            android:id="@+id/img_amr2"/>
+            android:id="@+id/img_amr2"
+            android:onClick="Go_to_activity_all_post_found"/>
 
         <TextView
             android:layout_width="wrap_content"
