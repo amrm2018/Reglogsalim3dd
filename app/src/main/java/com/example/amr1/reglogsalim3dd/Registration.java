@@ -72,6 +72,7 @@ public class Registration extends AppCompatActivity  {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
                 String selectspinner =adapterView.getItemAtPosition(i).toString();
                 tv.setText(selectspinner);
             }

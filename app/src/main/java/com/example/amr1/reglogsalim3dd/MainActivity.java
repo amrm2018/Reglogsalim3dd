@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         chk_remember=findViewById(R.id.chk_remember);
 
        gloablV = (GloablV) getApplicationContext();
+       gloablV.setEmail_user(email);
 
 
 
@@ -91,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "تم تسجيل الدخول", Toast.LENGTH_SHORT).show();
                             ly_login.setVisibility(View.INVISIBLE);
                             gloablV.setEmail_user(Log_in_name);
-
                             if (chk_remember.isChecked()) {
                                 getSharedPreferences("MyPref1", MODE_PRIVATE)
                                         .edit()

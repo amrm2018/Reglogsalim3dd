@@ -5,354 +5,334 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.amr1.reglogsalim3dd.Create_Post_Found"
-    android:padding="3dp"
-    android:background="@color/color2">
+    tools:context="com.example.amr1.reglogsalim3dd.Create_Post_Found">
 
-    <android.support.v7.widget.CardView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:cardCornerRadius="1dp">
+        android:id="@+id/rel_found1"
+        android:background="@color/colorLightBlue" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="46dp"
-            android:layout_gravity="center_vertical" >
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:id="@+id/img_back"
+            android:onClick="back_finish"
+            android:src="@drawable/right_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
 
-            <LinearLayout
-                android:onClick="btn_create_post_found"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="1dp"
-                android:paddingLeft="1dp"
-                android:paddingRight="5dp"
-                android:gravity="center"
-                android:background="@color/color8" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_back"
+            android:onClick="back_finish"
+            android:text="رجوع"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_toLeftOf="@id/img_back"
+            android:layout_centerVertical="true"/>
 
-                <TextView
-                    android:onClick="btn_create_post_found"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv_create_post"
-                    android:text="نشر"
-                    android:textStyle="bold"
-                    android:textSize="19sp"
-                    android:textColor="@color/colorBlack"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_title"
+            android:text="الاعلان عن حالة تم رؤيتها"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"/>
 
-                <ImageView
-                    android:onClick="btn_create_post_found"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/post1"
-                    android:layout_toRightOf="@id/tv_create_post"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="9"
-                android:layout_marginRight="1dp"
-                android:background="@color/color7"
-                android:gravity="right|center_vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toStartOf="@id/img_back"
-                    android:text="الاعلان عن حالة تم رؤيتها"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/color8" />
-
-                <ImageView
-                    android:id="@+id/img_back"
-                    android:onClick="btn_back_logout"
-                    android:layout_width="28dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/right_arrow"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="52dp"
-        app:cardCornerRadius="5dp"
-        app:cardBackgroundColor="#fff">
+        android:id="@+id/scrollView1"
+        android:layout_below="@id/rel_found1">
 
-        <ScrollView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:id="@+id/img_post_found"
+                android:src="@drawable/gallery"
+                android:scaleType="fitCenter"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/btn_open_gallery"
+                android:onClick="btn_pick_photo"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="160dp"
+                android:background="@drawable/opencamera_1"
+                android:elevation="4dp"
+                android:src="@drawable/opencamera_1"
+                app:civ_border_color="#5c66c7"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_title2"
+                android:layout_below="@id/btn_open_gallery"
+                android:layout_marginTop="5dp"
+                android:text="أكتب التاريخ اللى شوفت فيه الحالة"
+                android:textColor="#4d8ecf"
+                android:layout_centerHorizontal="true" />
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical" >
+                android:layout_height="wrap_content"
+                android:id="@+id/lin_date"
+                android:layout_below="@id/tv_title2"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp">
 
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:id="@+id/ed_year"
+                    android:hint="السنة"
+                    android:textColorHint="#000"
+                    android:textColor="#000"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="right"
+                    android:inputType="date" />
 
-                <ImageView
-                    android:id="@+id/img_select_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="180dp"
-                    android:layout_marginTop="5dp"
-                    android:src="@drawable/select_image2"
-                    android:background="#de96c7e1" />
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:id="@+id/spinner_month"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:entries="@array/spinner_month"
+                    android:gravity="center"
+                    />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:id="@+id/ed_day"
+                    android:hint="يوم"
+                    android:textColorHint="#000"
+                    android:textColor="#000"
+                    android:layout_marginRight="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="right"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/lin_city"
+                android:layout_below="@id/lin_date"
+                android:layout_marginTop="2dp"
+                android:gravity="right|center_vertical"
+                android:paddingRight="5dp">
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/sp_city"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:entries="@array/spinner_city"
+                    android:gravity="center_vertical|right" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="أكتب التاريخ اللى شوفت فيه الحالة"
+                    android:layout_marginRight="5dp"
+                    android:text="المحافظة اللى فيها الحالة  :"
                     android:textColor="#000"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:layout_gravity="center_horizontal"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal|center_vertical"
-                    android:layout_marginTop="3dp"
-                    android:paddingRight="5dp"
-                    android:paddingLeft="5dp"
-                    android:background="@color/color8">
-
-                    <EditText
-                        android:id="@+id/ed_year"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:hint="السنة"
-                        android:textColorHint="@color/color3"
-                        android:textColor="@color/color3"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:gravity="right"
-                        android:inputType="date" />
-
-                    <Spinner
-                        android:id="@+id/spinner_month"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_weight="0"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="5dp"
-                        android:gravity="center"
-                        android:entries="@array/spinner_month"/>
-
-                    <EditText
-                        android:id="@+id/ed_day"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_weight="2"
-                        android:hint="يوم"
-                        android:textColorHint="@color/color3"
-                        android:textColor="@color/color3"
-                        android:layout_marginRight="10dp"
-                        android:paddingRight="10dp"
-                        android:gravity="right"
-                        android:inputType="number"
-                        android:contextClickable="true"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="2dp"
-                    android:gravity="right|center_vertical"
-                    android:background="@color/color8"
-                    android:paddingRight="5dp">
-
-                    <Spinner
-                        android:id="@+id/sp_city"
-                        android:layout_width="150dp"
-                        android:layout_height="40dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:gravity="right|center_vertical"
-                        android:entries="@array/spinner_city"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
-                        android:text="المدينة اللى فيها الحالة  :"
-                        android:textColor="@color/color3"
-                        android:textStyle="bold"
-                        android:textSize="16sp"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginTop="2dp"
-                    android:paddingRight="10dp"
-                    android:layout_gravity="right"
-                    android:gravity="right|center_vertical"
-                    android:background="@color/color8">
-
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="9"
-                        android:layout_marginTop="2dp"
-                        android:gravity="right"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/rdo_male"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
-                            android:checked="true"
-                            android:text="ذكر"
-                            android:textColor="@color/color3"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <RadioButton
-                            android:id="@+id/rdo_female"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:text="أنثي"
-                            android:textColor="@color/color3"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                    </RadioGroup>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_gravity="center"
-                        android:text="نوع الحالة  : "
-                        android:textColor="@color/color3"
-                        android:textStyle="bold"
-                        android:textSize="16sp"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:background="@color/color8"
-                    android:layout_marginTop="2dp"
-                    android:paddingRight="5dp"
-                    android:gravity="right|center_vertical">
-
-                    <EditText
-                        android:id="@+id/ed_phone"
-                        android:layout_width="200dp"
-                        android:layout_height="40dp"
-                        android:hint="رقم تليفونك"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorBlack"
-                        android:textColorHint="@color/color3"
-                        android:inputType="phone"
-                        android:background="@drawable/style_ed_create_post"
-                        android:paddingRight="5dp"
-                        android:gravity="right|center_vertical"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="85dp"
-                    android:layout_marginTop="2dp"
-                    android:padding="5dp"
-                    android:background="@color/color8"
-                    android:gravity="center"
-                    android:layout_gravity="center_vertical">
-
-                    <EditText
-                        android:id="@+id/ed_place_the_case"
-                        android:layout_width="match_parent"
-                        android:layout_height="75dp"
-                        android:hint="مكان الحالة بالتفصيل لو سمحت"
-                        android:textStyle="bold"
-                        android:paddingRight="5dp"
-                        android:textColorHint="@color/color3"
-                        android:textColor="@color/colorBlack"
-                        android:background="@drawable/style_ed_create_post"
-                        android:gravity="right|center_vertical"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    android:layout_marginTop="2dp"
-                    android:background="@color/color8"
-                    android:padding="5dp"
-                    android:gravity="center">
-
-                    <EditText
-                        android:id="@+id/ed_info_the_case"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:hint="أكتب المعلومات اللى تعرفها عن الحالة
-                        ( لبس اية- الهيئة - بيعمل اية _ )"
-                        android:paddingRight="5dp"
-                        android:textColorHint="@color/color3"
-                        android:textColor="@color/colorBlack"
-                        android:textStyle="bold"
-                        android:background="@drawable/style_ed_create_post"
-                        android:gravity="right|center_vertical"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/tv_show_spinner_month"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:visibility="invisible"
-                        android:text="00000"/>
-
-                    <TextView
-                        android:id="@+id/tv_show_spinner_city"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:visibility="invisible"
-                        android:text="11111"/>
-
-                    <TextView
-                        android:id="@+id/tv_show_email_user"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:text="2222"/>
-
-                </LinearLayout>
+                    android:textSize="15sp"/>
 
             </LinearLayout>
 
-        </ScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:id="@+id/lin_place"
+                android:layout_below="@id/lin_city"
+                android:layout_marginTop="2dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical">
 
-    </android.support.v7.widget.CardView>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:id="@+id/ed_place_the_case"
+                    android:hint="مكان الحالة بالتفصيل  : "
+                    android:paddingRight="5dp"
+                    android:textColorHint="#000"
+                    android:textColor="#000"
+                    android:gravity="right|center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:id="@+id/lin_info"
+                android:layout_below="@id/lin_place"
+                android:layout_marginTop="2dp"
+                android:padding="5dp"
+                android:gravity="center">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/ed_info_the_case"
+                    android:hint="أكتب المعلومات اللى تعرفها عن الحالة
+                        ( لابس اية - الهيئة - بيعمل اية )"
+                    android:paddingRight="5dp"
+                    android:textColorHint="#000"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="right|center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/lin_phone"
+                android:layout_below="@id/lin_info"
+                android:layout_marginTop="2dp"
+                android:paddingRight="5dp"
+                android:gravity="right|center_vertical">
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/ed_phone"
+                    android:hint="رقم تليفونك"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="#000"
+                    android:inputType="phone"
+                    android:paddingRight="5dp"
+                    android:gravity="right|center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/lin_gender"
+                android:layout_below="@id/lin_phone"
+                android:layout_marginTop="2dp"
+                android:paddingRight="10dp"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:layout_marginTop="2dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rdo_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:checked="true"
+                        android:text="ذكر"
+                        android:textColor="#000"
+                        android:textSize="15sp"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/rdo_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="أنثي"
+                        android:textColor="#000"
+                        android:textSize="15sp"
+                        />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="نوع المفقود  : "
+                    android:textColor="#000"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_create_post_found"
+                android:layout_below="@id/lin_gender"
+                android:onClick="btn_create_post_found"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/styel_btn_create_post"
+                android:gravity="center"
+                android:text="نــشــر"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#5588c6"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lin_text"
+                android:layout_below="@id/btn_create_post_found"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_show_spinner_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/tv_show_spinner_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/tv_show_email_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text=""/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 
 
